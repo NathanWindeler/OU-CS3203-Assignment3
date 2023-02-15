@@ -7,13 +7,18 @@ public class Assignment {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner kb = new Scanner(System.in);
-		System.out.println("Be careful when entering values - there's no error handling"); // I'm lazy lol
 		System.out.println("Enter size of array (integer): ");
 		int arrSize = kb.nextInt();
 		double[] nums = new double[arrSize];
 		System.out.println("Enter array contents (double): ");
-		for(int i = 0; i < arrSize; i++)
-			nums[i] = kb.nextDouble();
+		for(int i = 0; i < arrSize; i++) {
+			if(kb.hasNextDouble())
+				nums[i] = kb.nextDouble();
+			else {
+				kb.next();
+				i--;
+			}
+		}
 		double sum = add(nums);
 		double product = multiply(nums);
 		double[] reversed = reverse(nums);
@@ -21,6 +26,7 @@ public class Assignment {
 		System.out.printf("The sum is: %f \n", sum);
 		System.out.printf("The product is: %f \n", product);
 		System.out.println("Reversed array: " + Arrays.toString(reversed));
+		kb.close();
 	}
 	
 	public static double add(double[] nums) {
