@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Assignment {
@@ -15,8 +16,11 @@ public class Assignment {
 			nums[i] = kb.nextDouble();
 		double sum = add(nums);
 		double product = multiply(nums);
+		double[] reversed = reverse(nums);
+		System.out.println("Your array: " + Arrays.toString(nums));
 		System.out.printf("The sum is: %f \n", sum);
 		System.out.printf("The product is: %f \n", product);
+		System.out.println("Reversed array: " + Arrays.toString(reversed));
 	}
 	
 	public static double add(double[] nums) {
@@ -33,4 +37,11 @@ public class Assignment {
 		return product;
 	}
 
+	public static double[] reverse(double[] ray) {
+		double[] returnRay = new double[ray.length];
+		for(int i = 0; i < ray.length; i++) {
+			returnRay[ray.length-1-i] = ray[i];
+		}
+		return returnRay;
+	}
 }
