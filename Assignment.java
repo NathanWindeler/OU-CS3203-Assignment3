@@ -26,10 +26,7 @@ public class Assignment {
 		System.out.printf("The sum is: %f \n", sum);
 		System.out.printf("The product is: %f \n", product);
 		System.out.println("Reversed array: " + Arrays.toString(reversed));
-<<<<<<< HEAD
-=======
 		kb.close();
->>>>>>> 04d6e76 (Part10: Add some error handling)
 	}
 	
 	public static double add(double[] nums) {
