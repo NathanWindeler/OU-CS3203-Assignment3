@@ -33,4 +33,11 @@ public class Assignment {
 		return product;
 	}
 
+	public static double[] reverse(double[] ray) {
+		double[] returnRay = new double[ray.length];
+		for(int i = 0; i < ray.length; i++) {
+			returnRay[ray.length-i] = ray[i];
+		}
+		return returnRay;
+	}
 }
