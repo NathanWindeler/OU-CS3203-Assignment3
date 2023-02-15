@@ -6,11 +6,18 @@ public class Assignment {
 		
 	}
 	
-	public double sum(int[] nums) {
+	public double add(double[] nums) {
 		double sum = 0;
 		for(double num : nums)
 			sum += num;
 		return sum;
+	}
+	
+	public double multiply(double[] nums) {
+		double product = 1;
+		for(double num : nums)
+			product *= num;
+		return product;
 	}
 
 }
